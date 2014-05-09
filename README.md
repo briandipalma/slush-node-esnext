@@ -1,7 +1,6 @@
-# slush-node-esnext [![Build Status](https://secure.travis-ci.org/briandipalma/slush-node-esnext.png?branch=master)](https://travis-ci.org/briandipalma/slush-node-esnext) [![NPM version](https://badge-me.herokuapp.com/api/npm/slush-node-esnext.png)](http://badges.enytc.com/for/npm/slush-node-esnext) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/briandipalma/slush-node-esnext/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+# slush-node-esnext
 
 > Slush generator for creating node es next (ES6, ES7) projects, using traceur and ES6 module loader.
-
 
 ## Getting Started
 
@@ -10,27 +9,27 @@
 Install `slush-node-esnext` globally:
 
 ```bash
-$ npm install -g slush-node-esnext
+$ npm i -g slush-node-esnext
 ```
 
 Remember to install `slush` globally as well, if you haven't already:
 
 ```bash
-$ npm install -g slush
+$ npm i -g slush
 ```
 
 ### Usage
 
-Create a new folder for your project:
+Create a new folder for your node esnext package. Then cd into it.
 
 ```bash
-$ mkdir my-slush-node-esnext
+$ mkdir node-esnext-package && cd node-esnext-package
 ```
 
-Run the generator from within the new folder:
+Initiate the generator:
 
 ```bash
-$ cd my-slush-node-esnext && slush node-esnext
+$ slush node-esnext
 ```
 
 ## Getting To Know Slush
@@ -40,13 +39,6 @@ Slush is a tool that uses Gulp for project scaffolding.
 Slush does not contain anything "out of the box", except the ability to locate installed slush generators and to run them with liftoff.
 
 To find out more about Slush, check out the [documentation](https://github.com/klei/slush).
-
-## Contributing
-
-See the [CONTRIBUTING Guidelines](https://github.com/briandipalma/slush-node-esnext/blob/master/CONTRIBUTING.md)
-
-## Support
-If you have any problem or suggestion please open an issue [here](https://github.com/briandipalma/slush-node-esnext/issues).
 
 ## License 
 
@@ -74,4 +66,3 @@ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
-
