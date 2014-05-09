@@ -1,0 +1,13 @@
+{
+  "name": "<%= _.slugify(packageName) %>",
+  "version": "0.0.0",
+  "scripts": {
+    "prepublish": "npm run build"
+    "start": "npm run build && node index.js",
+    "build": "traceur --dir src/ out/ --modules=commonjs --sourcemap"
+  },
+  "dependencies": {
+    "traceur": "0.0.33",
+    "es6-module-loader": "0.5.4"
+  }
+}
