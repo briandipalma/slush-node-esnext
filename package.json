@@ -23,9 +23,6 @@
         "node": ">= 0.10.26",
         "npm": ">=1.4.3"
     },
-    "scripts": {
-        "test": "echo \"No tests\""
-    },
     "dependencies": {
         "gulp": "^3.6.2",
         "gulp-template": "^0.1.1",
