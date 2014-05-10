@@ -32,6 +32,21 @@ Initiate the generator:
 $ slush node-esnext
 ```
 
+### Commands
+
+Within your package the generator provides the following commands.
+
+* `npm run build` - Compiles ES6+ modules/code to ES5 CommonJS modules/code
+* `npm run start` - Execute your package. Only works if your package should run from the command line.
+
+### Conventions
+
+The generator expects a few conventions. They are easy to change if they are not suitable.
+
+* source code for your npm package is in the `src` directory.
+* compiled ES6+ code is outputed to the `out` directory.
+* the package `main` module is located at `src\index.js`.
+
 ## Getting To Know Slush
 
 Slush is a tool that uses Gulp for project scaffolding.
