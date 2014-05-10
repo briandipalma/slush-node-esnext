@@ -1,6 +1,6 @@
 # slush-node-esnext
 
-> Slush generator for creating node es next (ES6, ES7) projects, using traceur and ES6 module loader.
+> Slush generator for creating node es next (ES6, ES7) projects, uses traceur.
 
 ## Getting Started
 
