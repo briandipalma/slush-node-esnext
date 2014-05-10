@@ -1,7 +1,7 @@
 {
   "name": "slush-node-esnext",
   "description": "Slush generator for creating node es next (ES6, ES7) projects, uses traceur.",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "homepage": "https://github.com/briandipalma/slush-node-esnext",
   "author": {
     "name": "Brian Di Palma",
