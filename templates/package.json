@@ -1,8 +1,8 @@
 {
-  "name": "<%= _.slugify(packageName) %>",
+  "name": "<%= packageName %>",
   "version": "0.0.0",
   "scripts": {
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
     "start": "npm run build && node index.js",
     "build": "traceur --dir src/ out/ --modules=commonjs --sourcemap"
   },
