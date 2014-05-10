@@ -7,7 +7,6 @@
     "build": "traceur --dir src/ out/ --modules=commonjs --sourcemap"
   },
   "dependencies": {
-    "traceur": "0.0.33",
-    "es6-module-loader": "0.5.4"
+    "traceur": "0.0.41"
   }
 }
