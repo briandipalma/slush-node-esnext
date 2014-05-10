@@ -1,55 +1,33 @@
-/*
- * slush-node-esnext
- * https://github.com/briandipalma/slush-node-esnext
- *
- * Copyright (c) 2014, Brian Di Palma
- * Licensed under the MIT license.
- */
+"use strict";
 
-'use strict';
+var path = require("path");
 
-var gulp = require('gulp'),
-    install = require('gulp-install'),
-    conflict = require('gulp-conflict'),
-    template = require('gulp-template'),
-    rename = require('gulp-rename'),
-    _ = require('underscore.string'),
-    inquirer = require('inquirer');
+var gulp = require("gulp");
+var inquirer = require("inquirer");
+var install = require("gulp-install");
+var template = require("gulp-template");
+var conflict = require("gulp-conflict");
 
-gulp.task('default', function (done) {
-    var prompts = [{
-        type: 'input',
-        name: 'appName',
-        message: 'What is the name of your generator?',
-        default: gulp.args.join(' ')
-    }, {
-        type: 'input',
-        name: 'appDescription',
-        message: 'What is the description for your generator?'
-    }, {
-        type: 'confirm',
-        name: 'moveon',
-        message: 'Continue?'
-    }];
-    //Ask
-    inquirer.prompt(prompts,
-        function (answers) {
-            if (!answers.moveon) {
-                return done();
-            }
-            answers.appNameSlug = _.slugify(answers.appName);
-            gulp.src(__dirname + '/templates/**')
-                .pipe(template(answers))
-                .pipe(rename(function (file) {
-                    if (file.basename[0] === '_') {
-                        file.basename = '.' + file.basename.slice(1);
-                    }
-                }))
-                .pipe(conflict('./'))
-                .pipe(gulp.dest('./'))
-                .pipe(install())
-                .on('end', function () {
-                    done();
-                });
-        });
+var prompts = [{
+	type: "input",
+	name: "packageName",
+	default: "node-esnext-package",
+	message: "What do you want to call your new node ES next package?"
+}];
+
+var templatesDirectory = path.join(__dirname, "templates", "**");
+
+function questionsAnswered(done, answers) {
+	gulp.src(templatesDirectory)
+		.pipe(template(answers))
+		.pipe(conflict("./"))
+		.pipe(gulp.dest("./"))
+		.pipe(install())
+		.on("end", function() {
+			done();
+		});
+}
+
+gulp.task("default", function(done) {
+	inquirer.prompt(prompts, questionsAnswered.bind(null, done));
 });
