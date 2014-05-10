@@ -1,38 +1,38 @@
 {
-    "name": "slush-node-esnext",
-    "description": "Slush generator for creating node es next (ES6, ES7) projects, using traceur and ES6 module loader.",
-    "version": "0.1.0",
-    "homepage": "https://github.com/briandipalma/slush-node-esnext",
-    "author": {
-        "name": "Brian Di Palma",
-        "email": "offler@gmail.com"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/briandipalma/slush-node-esnext.git"
-    },
-    "bugs": {
-        "url": "https://github.com/briandipalma/slush-node-esnext/issues"
-    },
-    "licenses": [{
-        "type": "MIT",
-        "url": "https://github.com/briandipalma/slush-node-esnext/blob/master/LICENSE"
-    }],
-    "main": "slushfile.js",
-    "engines": {
-        "node": ">= 0.10.26",
-        "npm": ">=1.4.3"
-    },
-    "dependencies": {
-        "gulp": "^3.6.2",
-        "gulp-template": "^0.1.1",
-        "gulp-install": "^0.1.4",
-        "gulp-conflict": "^0.1.1",
-        "gulp-rename": "^1.2.0",
-        "underscore.string": "^2.3.3",
-        "inquirer": "^0.4.1"
-    },
-    "keywords": [
-        "slushgenerator"
-    ]
+  "name": "slush-node-esnext",
+  "description": "Slush generator for creating node es next (ES6, ES7) projects, using traceur and ES6 module loader.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/briandipalma/slush-node-esnext",
+  "author": {
+    "name": "Brian Di Palma",
+    "email": "offler@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/briandipalma/slush-node-esnext.git"
+  },
+  "bugs": {
+    "url": "https://github.com/briandipalma/slush-node-esnext/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/briandipalma/slush-node-esnext/blob/master/LICENSE"
+    }
+  ],
+  "main": "slushfile.js",
+  "engines": {
+    "node": ">= 0.10.26",
+    "npm": ">=1.4.3"
+  },
+  "dependencies": {
+    "gulp": "^3.6.2",
+    "gulp-template": "^0.1.1",
+    "gulp-install": "^0.1.4",
+    "gulp-conflict": "^0.1.1",
+    "inquirer": "^0.4.1"
+  },
+  "keywords": [
+    "slushgenerator"
+  ]
 }
