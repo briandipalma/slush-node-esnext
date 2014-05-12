@@ -33,6 +33,6 @@
     "inquirer": "^0.4.1"
   },
   "keywords": [
-    "slushgenerator"
+    "slush-generator"
   ]
 }
