@@ -1,3 +1,5 @@
+![](https://david-dm.org/briandipalma/slush-node-esnext.png)
+
 # slush-node-esnext
 
 > Slush generator for creating node es next (ES6, ES7) projects, uses traceur.
