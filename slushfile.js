@@ -8,6 +8,7 @@ var rename = require("gulp-rename");
 var install = require("gulp-install");
 var template = require("gulp-template");
 var conflict = require("gulp-conflict");
+var jsoneditor = require("gulp-json-editor");
 
 var prompts = [{
 	type: "input",
@@ -25,8 +26,23 @@ function renameBinFile(packageName, file) {
 	}
 }
 
+function modifyPackageJsonBin(packageName, packageJson) {
+	packageJson.bin = "./bin/" + packageName + "-cli.js";
+
+	return packageJson;
+}
+
+function binTaskFinished(done, packageJSONPath, packageName) {
+	gulp.src(packageJSONPath)
+		.pipe(jsoneditor(modifyPackageJsonBin.bind(null, packageName)))
+		.pipe(gulp.dest("./"))
+		.on("end", function() {
+			done();
+		});
+}
+
 function binTask(done) {
-	var packageJSONPath = path.join(process.cwd(), "package");
+	var packageJSONPath = path.join(process.cwd(), "package.json");
 	var packageJSON = require(packageJSONPath);
 	var packageName = packageJSON.name;
 	var templateData = {packageName: packageName};
@@ -36,9 +52,7 @@ function binTask(done) {
 		.pipe(rename(renameBinFile.bind(null, packageName)))
 		.pipe(conflict("./"))
 		.pipe(gulp.dest("./"))
-		.on("end", function() {
-			done();
-		});
+		.on("end", binTaskFinished.bind(null, done, packageJSONPath, packageName));
 }
 
 function questionsAnswered(done, answers) {
