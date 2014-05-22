@@ -9,6 +9,6 @@
   },
   "dependencies": {
     "traceur": "0.0.41",
-    "watchy": "^0.4.4"
+    "watchy": "~0.4.4"
   }
 }
