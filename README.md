@@ -34,6 +34,16 @@ Initiate the generator:
 $ slush node-esnext
 ```
 
+### Tasks
+
+#### bin
+
+```bash
+$ slush node-esnext:bin
+```
+
+Will add a `bin` key to your `package.json` and a bin cli script which allows your package to run as a global command in your shell.
+
 ### Commands
 
 Within your package the generator provides the following commands.
@@ -56,7 +66,7 @@ Slush is a tool that uses Gulp for project scaffolding.
 
 Slush does not contain anything "out of the box", except the ability to locate installed slush generators and to run them with liftoff.
 
-To find out more about Slush, check out the [documentation](https://github.com/klei/slush).
+To find out more about Slush, check out the [documentation](https://github.com/slushjs/slush).
 
 ## License 
 
