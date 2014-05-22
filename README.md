@@ -1,4 +1,4 @@
-![](https://david-dm.org/briandipalma/slush-node-esnext.png)
+[![npm](https://badge.fury.io/js/slush-node-esnext.png)](http://badge.fury.io/js/slush-node-esnext) ![](https://david-dm.org/briandipalma/slush-node-esnext.png)
 
 # slush-node-esnext
 
