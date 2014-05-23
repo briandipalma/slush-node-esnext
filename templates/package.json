@@ -8,7 +8,9 @@
     "build": "traceur --dir src/ out/ --modules=commonjs --sourcemap"
   },
   "dependencies": {
-    "traceur": "0.0.42",
+    "traceur": "0.0.42"
+  },
+  "devDependencies": {
     "watchy": "~0.4.4"
   }
 }
