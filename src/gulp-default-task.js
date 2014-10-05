@@ -18,7 +18,7 @@ var prompts = [{
 var templatesDirectory = path.join(__dirname, "..", "templates", "**");
 
 function questionsAnswered(done, answers) {
-	gulp.src(templatesDirectory)
+	gulp.src(templatesDirectory, {dot: true})
 		.pipe(template(answers))
 		.pipe(conflict("./"))
 		.pipe(gulp.dest("./"))
